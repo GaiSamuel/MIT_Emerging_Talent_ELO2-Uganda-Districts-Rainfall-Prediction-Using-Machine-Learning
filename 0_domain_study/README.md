@@ -10,11 +10,12 @@
 
 If you are new to this project, start here to understand the context.
 
+<!-- markdownlint-disable MD013 -->
 | File / Resource | Type | Description |
 | :--- | :--- | :--- |
-| **[0_domain_research.md](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/0_domain_study/0_domain_research.md)** | **⭐️ Start Here** | **The Master Summary.** Our group's synthesized understanding of the problem. Includes the System Analysis, Stakeholder Breakdown, and Gap Analysis. |
+| **[0_domain_research.md](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/0_domain_study/0_domain_research.md)** | **Start Here** | **The Master Summary.** Our group's synthesized understanding of the problem. Includes the System Analysis, Stakeholder Breakdown, and Gap Analysis. |
 | **[September to December (SOND) 2025 Seasonal Rainfall Outlook](https://meteo.mwe.go.ug/media/downloads/files/September%20to%20December%20(SOND)%202025%20Seasonal%20Rainfall%20Outlook%20(1)_compressed.pdf)** | `PDF` | **Primary Source.** The official UNMA report forecasting "Above-Normal" rainfall. Contains critical data on sector-specific impacts (Agri, Health, Disaster). |
-
+<!-- markdownlint-enable MD013 -->
 ---
 
 ## 🔗 External Resources & References
