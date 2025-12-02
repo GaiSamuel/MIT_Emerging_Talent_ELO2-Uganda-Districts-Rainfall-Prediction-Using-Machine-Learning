@@ -10,12 +10,11 @@
 
 If you are new to this project, start here to understand the context.
 
-<!-- markdownlint-disable MD013 -->
 | File / Resource | Type | Description |
 | :--- | :--- | :--- |
 | **[0_domain_research.md](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/0_domain_study/0_domain_research.md)** | **Start Here** | **The Master Summary.** Our group's synthesized understanding of the problem. Includes the System Analysis, Stakeholder Breakdown, and Gap Analysis. |
 | **[September to December (SOND) 2025 Seasonal Rainfall Outlook](https://meteo.mwe.go.ug/media/downloads/files/September%20to%20December%20(SOND)%202025%20Seasonal%20Rainfall%20Outlook%20(1)_compressed.pdf)** | `PDF` | **Primary Source.** The official UNMA report forecasting "Above-Normal" rainfall. Contains critical data on sector-specific impacts (Agri, Health, Disaster). |
-<!-- markdownlint-enable MD013 -->
+
 ---
 
 ## 🔗 External Resources & References
@@ -25,7 +24,8 @@ These are live links to the data sources and organizations relevant to our
 
 ### 🌦️ Meteorological Data Sources
 
-- **[Copernicus Climate Data Store (ERA5)](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download) and**
+- **[Copernicus Climate Data Store (ERA5)](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download)**
+  **and**
  **[Climate Hazards Center](https://data.chc.ucsb.edu/products/CHIRPS-2.0/EAC_monthly/tifs/)**
 : The source of our historical reanalysis and Rainfall data (1981–Present). We
  use this to train our model.
