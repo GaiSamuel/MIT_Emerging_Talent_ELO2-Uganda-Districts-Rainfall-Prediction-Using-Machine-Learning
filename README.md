@@ -185,6 +185,8 @@ If you are a farmer, policy-maker, or district planner, you need to know if you
      in the Lake Victoria Basin are naturally wetter and that districts in the Karamoja
       region are naturally drier. It generates a unique forecast for every single
        district based on that district's unique history.
+    ![district rainfall trend](graphs/district_plots/Luuka_predicted_rainfall.png)
+    ![district rainfall trend](graphs/district_plots/Nebbi_predicted_rainfall.png)
     ![wettest vs driest](graphs/wettest_vs_driest_districts.png)
 
 ---
@@ -262,6 +264,7 @@ Since we don't have future weather data to feed the model, we used a
 | **[`data_analysis.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/4_data_analysis/data_analysis.ipynb)** | **The Core Pipeline.** <br>1. Loads clean data.<br>2. Generates Lag/Rolling features.<br>3. Splits data by Time (Train < 2019).<br>4. Trains the Random Forest.<br>5. Generates the 14-month recursive forecast. |
 | *[`raw_data_exploration.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/raw_data_exploration.ipynb)* | *Pre-analysis visualization of historical trends (See Exploration folder).* |
 | *[`predicted_data_exploration.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/predicted_data_exploration.ipynb)* | *Post-modeling validation. Visualizes the 14-month forecast to confirm seasonality (bimodal pattern), spatial distribution (wettest vs. driest districts), and regional consistency.* |
+|*[`district_graphs.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/district_graphs.ipynb)*|Generates visuals for predicted rainfall trend for each district (see exploration folder)|
 <!-- markdownlint-enable MD033 -->
 <!-- markdownlint-enable MD013 -->
 
