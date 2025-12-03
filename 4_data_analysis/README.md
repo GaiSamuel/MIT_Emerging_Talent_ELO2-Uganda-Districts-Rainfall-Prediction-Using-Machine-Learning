@@ -31,11 +31,13 @@ To turn raw dates into learnable patterns, we created three categories of featur
  Smooths out daily noise to show the "wetness state" of the region.*
 
 > **⚠️ Leakage Prevention:** All rolling means were calculated using `.shift(1)`
-> to ensure the model never sees the target month's data when making a prediction.
+to ensure the model never sees the target month's data when making a prediction.
 
 ---
 
 ## 2. Notebooks & Scripts
+
+<!-- markdownlint-disable MD013 -->
 <!-- markdownlint-disable MD033 -->
 | File | Description |
 | :--- | :--- |
@@ -43,7 +45,7 @@ To turn raw dates into learnable patterns, we created three categories of featur
 | *[`raw_data_exploration.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/raw_data_exploration.ipynb)* | *Pre-analysis visualization of historical trends (See Exploration folder).* |
 | *[`predicted_data_exploration.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/predicted_data_exploration.ipynb)*| *Post-modeling validation. Visualizes the 14-month forecast to confirm seasonality (bimodal pattern), spatial distribution (wettest vs. driest districts), and regional consistency (See Exploration folder).*                             |
 <!-- markdownlint-enable MD033 -->
-
+<!-- markdownlint-enable MD013 -->
 ---
 
 ## 3. Model Performance (Results)
