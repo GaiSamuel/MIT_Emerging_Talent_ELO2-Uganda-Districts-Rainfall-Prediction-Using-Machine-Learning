@@ -72,6 +72,17 @@
  districts like **Ntoroko** and **Buliisa**, highlighting potential drought
   risks for 2026. Conversely, **Kalangala** exceeds 2500mm, posing flood risks.
 
+**[district_graphs.ipynb:](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/district_graphs.ipynb)**  
+
+- Batch Generation of District Forecast Plots To facilitate localized analysis,
+ this notebook contains a script that automates the visualization of rainfall
+  trends for all districts in the dataset.
+  - Process: Iterates through unique districts in the 2025-2026 forecast dataset.
+  - Visualization: Uses `Seaborn` to generate line graphs showing predicted
+   rainfall (mm) over time.
+  - Output: Automatically exports and saves high-resolution PNG images to the
+   `graphs/district_plots/` folder with standardized filenames (e.g., `Mukono_predicted_rainfall.png`).
+
 ---
 
 ## 🚀 How to Run
@@ -82,3 +93,5 @@ To replicate these insights, ensure your environment has `seaborn`, `matplotlib`
 ```bash
 jupyter notebook raw_data_exploration.ipynb
 jupyter notebook predicted_data_exploration.ipynb
+jupyter notebook district_graphs.ipynb
+```
