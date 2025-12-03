@@ -255,6 +255,7 @@ Since we don't have future weather data to feed the model, we used a
 
 ## 5. Notebooks & Scripts
 
+<!-- markdownlint-disable MD013 -->
 <!-- markdownlint-disable MD033 -->
 | File | Description |
 | :--- | :--- |
@@ -262,6 +263,7 @@ Since we don't have future weather data to feed the model, we used a
 | *[`raw_data_exploration.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/raw_data_exploration.ipynb)* | *Pre-analysis visualization of historical trends (See Exploration folder).* |
 | *[`predicted_data_exploration.ipynb`](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/3_data_exploration/predicted_data_exploration.ipynb)* | *Post-modeling validation. Visualizes the 14-month forecast to confirm seasonality (bimodal pattern), spatial distribution (wettest vs. driest districts), and regional consistency.* |
 <!-- markdownlint-enable MD033 -->
+<!-- markdownlint-enable MD013 -->
 
 ### 6. ⚠️ Possible Flaws
 
