@@ -1,0 +1,23 @@
+/* rainfall-webapp/static/css/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rainfall-card {
+    transition: transform 0.3s ease;
+}
+
+.rainfall-card:hover {
+    transform: translateY(-5px);
+}
+
+.region-badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
