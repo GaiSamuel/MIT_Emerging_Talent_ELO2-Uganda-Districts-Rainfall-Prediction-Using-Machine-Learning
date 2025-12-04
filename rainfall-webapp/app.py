@@ -1,7 +1,7 @@
 # app.py - Uganda Rainfall Forecast Web Application
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
-import numpy as np
+#import numpy as np
 from datetime import datetime
 import os
 
