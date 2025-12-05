@@ -31,6 +31,7 @@
 | `processing_total_cloud_cover.ipynb` | ERA5 Cloud Cover (`.grib`) | Extracts cloud cover fraction. | `uganda_monthly_total_cloud_cover_1981_2025.csv` |
 | `processing_wind_u_component.ipynb` | ERA5 Wind U (`.grib`) | Extracts Zonal (East-West) wind vectors. | `uganda_monthly_wind_u_component_1981_2025.csv` |
 | `processing_wind_v_component.ipynb` | ERA5 Wind V (`.grib`) | Extracts Meridional (North-South) wind vectors. | `uganda_monthly_wind_v_component_1981_2025.csv` |
+|`print_districts_coordinates_for_website_mapping.ipynb`|Simplified UBOS administrative boundaries (`.shp`)|Prints each district's co-ordinates that are then pasted into the `interactive_website.html` file so the districts can be well mapped on the website|Printed inside the `print_districts_coordinates_for_website_mapping.ipynb` file|
 <!-- markdownlint-enable MD013 -->
 
 ---

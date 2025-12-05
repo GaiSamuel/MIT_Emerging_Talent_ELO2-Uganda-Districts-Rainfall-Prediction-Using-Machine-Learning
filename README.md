@@ -207,6 +207,29 @@ We selected **Random Forest** over simpler linear models because:
 - **Robustness:** It is less sensitive to outliers, which is crucial for noisy
  weather data.
 
+### 🔄 Data Batching & Validation Strategy
+
+*How we ensured the model predicts the future, not the past.*
+
+1. **Training Batch (The Past):**
+    - **Period:** Jan 1981 – Dec 2018 (38 years)
+    - **Purpose:** The model learns long-term climate trends, seasonal cycles
+   (MAM/SON), and physical relationships between variables (e.g., how temperature
+    affects rainfall).
+    - **Size:** ~85% of the total dataset.
+
+2. **Validation Batch (The "Future"):**
+    - **Period:** Jan 2019 – Oct 2025 (7 years)
+    - **Purpose:** We test the model on this unseen "future" data to simulate
+   real-world forecasting. If the model can accurately predict the 2020 floods
+    using only data from before 2019, we know it is robust.
+    - **Size:** ~15% of the total dataset.
+
+**Why this matters:**
+This approach mimics the real-world constraint where we only have data up to
+ Oct 2025 and need to predict Nov 2025 onwards. It prevents **Data Leakage** and
+  ensures our accuracy metrics (RMSE) reflect true predictive power.
+
 ### 🛠 Feature Engineering
 
 To turn raw dates into learnable patterns, we created three categories of features:
@@ -277,3 +300,45 @@ Since we don't have future weather data to feed the model, we used a
   propagates and grows by Month 14.
 
 ---
+
+## 📢 4. Communication Strategy
+
+### 🎯 Target Audience
+
+We have identified three primary user groups who need actionable climate intelligence:
+
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD013 -->
+| Persona | Needs | The "So What?" |
+| :--- | :--- | :--- |
+| **The Smallholder Farmer**<br>*(e.g., "Farmer Joyce")* | Needs to know *when* to plant and *what* seed variety to use. | If she plants beans during a predicted flood month, she loses her entire harvest to root rot. |
+| **The District Planner**<br>*(e.g., "Local Govt Officer")* | Needs to budget for road maintenance and fertilizer subsidies. | If he knows Elgon region faces landslides in October, he can pre-position road-clearing equipment. |
+| **The Disaster Manager**<br>*(e.g., "Red Cross Volunteer")* | Needs early warning for floods/droughts to save lives. | Knowing that Ntoroko faces a drought in 2026 allows for early food relief planning. |
+<!-- markdownlint-enable MD013 -->
+<!-- markdownlint-enable MD033 -->
+
+### 🗣 The Artifact: Interactive Rainfall Website
+
+We chose to build a **Web-Based Dashboard** (HTML/JS) as our primary
+ communication artifact.
+
+**Justification:**
+
+1. **Accessibility:** A website can be accessed on a smartphone by extension
+ workers and district officers in the field.
+2. **Interactivity:** A static report is overwhelming. A search bar allows a
+ user to find *their* specific district immediately.
+3. **Action-Oriented:** The website doesn't just show charts; it translates data
+ into specific advice (e.g., *"Delay planting beans"*), bridging the gap between
+  "Data" and "Knowledge."
+
+### 🔑 Key Messages
+
+1. **Uncertainty is Normal:** We communicate forecast ranges (e.g., "Moderate Risk")
+ rather than absolute certainties to manage expectations.
+2. **Geography Matters:** The forecast for the North is totally different from the
+ Central region. Localized data is better than national averages.
+3. **Prepare, Don't Panic:** The goal is resilience. Knowing a drought is coming
+ is an opportunity to plant drought-resistant crops like Cassava.
+
+### 🔗 Link to Artifact
