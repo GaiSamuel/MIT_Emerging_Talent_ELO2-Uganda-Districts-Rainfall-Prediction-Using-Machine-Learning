@@ -342,3 +342,5 @@ We chose to build a **Web-Based Dashboard** (HTML/JS) as our primary
  is an opportunity to plant drought-resistant crops like Cassava.
 
 ### 🔗 Link to Artifact
+
+[`Deployed Interactive Artifact`](https://gaisamuel.github.io/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/)
