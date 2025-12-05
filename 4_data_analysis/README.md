@@ -19,6 +19,29 @@ We selected **Random Forest** over simpler linear models because:
 - **Robustness:** It is less sensitive to outliers than Neural Networks, which is
  crucial for noisy weather data.
 
+### 🔄 Data Batching & Validation Strategy
+
+*How we ensured the model predicts the future, not the past.*
+
+1. **Training Batch (The Past):**
+    - **Period:** Jan 1981 – Dec 2018 (38 years)
+    - **Purpose:** The model learns long-term climate trends, seasonal cycles
+   (MAM/SON), and physical relationships between variables (e.g., how temperature
+    affects rainfall).
+    - **Size:** ~85% of the total dataset.
+
+2. **Validation Batch (The "Future"):**
+    - **Period:** Jan 2019 – Oct 2025 (7 years)
+    - **Purpose:** We test the model on this unseen "future" data to simulate
+   real-world forecasting. If the model can accurately predict the 2020 floods
+    using only data from before 2019, we know it is robust.
+    - **Size:** ~15% of the total dataset.
+
+**Why this matters:**
+This approach mimics the real-world constraint where we only have data up to
+ Oct 2025 and need to predict Nov 2025 onwards. It prevents **Data Leakage** and
+  ensures our accuracy metrics (RMSE) reflect true predictive power.
+
 ### 🛠 Feature Engineering
 
 To turn raw dates into learnable patterns, we created three categories of features:
