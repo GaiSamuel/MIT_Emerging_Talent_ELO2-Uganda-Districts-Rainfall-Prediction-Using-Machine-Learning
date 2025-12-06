@@ -58,8 +58,6 @@
       background: #1e293b;
       border-radius: 0.75rem;
       z-index: 0;
-      /* Removed pointer-events: none to enable interaction */
-      /* Removed grayscale filter for better visibility */
     }
 
     /* Customize Leaflet Popup to match dark theme */
@@ -72,12 +70,42 @@
     .leaflet-popup-tip {
       background: #3b82f6;
     }
+
+    /* Modal Animation */
+    .modal-open {
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <div class="rain-container" id="rain"></div>
+
+  <!-- IMAGE MODAL -->
+  <div id="imageModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/90 backdrop-blur-sm"
+    onclick="closeModal()">
+    <div class="relative max-w-5xl w-full mx-4 modal-open" onclick="event.stopPropagation()">
+      <button onclick="closeModal()" class="absolute -top-10 right-0 text-white hover:text-red-400 transition">
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <img id="modalImage" src="" alt="Full Visualization"
+        class="w-full h-auto rounded-lg shadow-2xl border border-slate-700">
+      <p id="modalCaption" class="text-center text-gray-400 mt-4 text-lg font-medium"></p>
+    </div>
+  </div>
 
   <div class="container mx-auto px-4 py-8 max-w-6xl min-h-screen flex flex-col">
 
@@ -123,33 +151,52 @@
         <div class="grid grid-cols-2 gap-4">
 
           <!-- National Trend -->
-          <div
-            class="bg-slate-800/50 rounded-lg p-2 border border-slate-600 flex flex-col items-center text-center group hover:scale-105 transition duration-300">
-            <div class="w-full h-24 rounded mb-2 overflow-hidden">
-              <img src="images/national_rainfall_trend.png" class="w-full h-full object-cover">
+          <div onclick="openModal('images/national_rainfall_trend.png', 'National Trend: Captures Bimodal Seasonality')"
+            class="bg-slate-800/50 rounded-lg p-2 border border-slate-600 flex flex-col items-center text-center group hover:bg-slate-700/50 hover:scale-105 transition duration-300 cursor-zoom-in">
+            <div class="w-full h-24 rounded mb-2 overflow-hidden bg-slate-900 relative">
+              <img src="images/national_rainfall_trend.png"
+                onerror="this.src='https://placehold.co/400x300/1e293b/475569?text=National+Trend'" alt="National Trend"
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/30">
+                <i data-lucide="maximize-2" class="text-white w-6 h-6"></i>
+              </div>
             </div>
-            <p class="text-xs text-gray-400 font-semibold">National Trend</p>
+            <p class="text-xs text-gray-300 font-semibold">National Trend</p>
             <p class="text-[10px] text-gray-500">Captures Bimodal Seasonality</p>
           </div>
 
           <!-- Spatial Analysis -->
           <div
-            class="bg-slate-800/50 rounded-lg p-2 border border-slate-600 flex flex-col items-center text-center group hover:scale-105 transition duration-300">
-            <div class="w-full h-24 rounded mb-2 overflow-hidden">
-              <img src="images/wettest_vs_driest_districts.png" class="w-full h-full object-cover">
+            onclick="openModal('images/wettest_vs_driest_districts.png', 'Spatial Analysis: Wettest vs. Driest Districts')"
+            class="bg-slate-800/50 rounded-lg p-2 border border-slate-600 flex flex-col items-center text-center group hover:bg-slate-700/50 hover:scale-105 transition duration-300 cursor-zoom-in">
+            <div class="w-full h-24 rounded mb-2 overflow-hidden bg-slate-900 relative">
+              <img src="images/wettest_vs_driest_districts.png"
+                onerror="this.src='https://placehold.co/400x300/1e293b/475569?text=Spatial+Analysis'"
+                alt="Spatial Analysis" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/30">
+                <i data-lucide="maximize-2" class="text-white w-6 h-6"></i>
+              </div>
             </div>
-            <p class="text-xs text-gray-400 font-semibold">Spatial Analysis</p>
+            <p class="text-xs text-gray-300 font-semibold">Spatial Analysis</p>
             <p class="text-[10px] text-gray-500">Wettest vs. Driest Districts</p>
           </div>
 
           <!-- Regional Trends -->
-          <div
-            class="bg-slate-800/50 rounded-lg p-2 border border-slate-600 flex flex-col items-center text-center group hover:scale-105 transition duration-300">
-            <div class="w-full h-24 rounded mb-2 overflow-hidden">
-              <img src="images/regional_rainfall_trend.png" class="w-full h-full object-cover">
+          <div onclick="openModal('images/regional_rainfall_trend.png', 'Regional Trends: Distinct Climate Zones')"
+            class="bg-slate-800/50 rounded-lg p-2 border border-slate-600 flex flex-col items-center text-center group hover:bg-slate-700/50 hover:scale-105 transition duration-300 cursor-zoom-in">
+            <div class="w-full h-24 rounded mb-2 overflow-hidden bg-slate-900 relative">
+              <img src="images/regional_rainfall_trend.png"
+                onerror="this.src='https://placehold.co/400x300/1e293b/475569?text=Regional+Trends'"
+                alt="Regional Trends" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition">
+              <div
+                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/30">
+                <i data-lucide="maximize-2" class="text-white w-6 h-6"></i>
+              </div>
             </div>
-            <p class="text-xs text-gray-400 font-semibold">Regional Trends</p>
-            <p class="text-[10px] text-gray-500">North, Central, West and East</p>
+            <p class="text-xs text-gray-300 font-semibold">Regional Trends</p>
+            <p class="text-[10px] text-gray-500">North, East, West and Central Regions' Trends</p>
           </div>
 
           <div
@@ -647,6 +694,21 @@
       document.getElementById('farmerAdvice').innerHTML = createList(advice.farmers);
       document.getElementById('govtAdvice').innerHTML = createList(advice.govt);
       document.getElementById('disasterAdvice').innerHTML = createList(advice.disaster);
+    }
+
+    // Add helper functions for MODALS
+    function openModal(imageSrc, captionText) { // Added: Function to handle opening the modal with specific image and caption
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+
+      modal.classList.remove('hidden');
+      modalImg.src = imageSrc;
+      modalCaption.innerText = captionText;
+    }
+
+    function closeModal() { // Added: Function to handle closing the modal
+      document.getElementById('imageModal').classList.add('hidden');
     }
   </script>
 </body>
