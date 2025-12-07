@@ -344,3 +344,14 @@ We chose to build a **Web-Based Dashboard** (HTML/JS) as our primary
 ### 🔗 Link to Artifact
 
 [`Deployed Interactive Artifact`](https://gaisamuel.github.io/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/)
+
+---
+
+### 🔗 Link to the Presentation
+
+[`Presentation Slides`](https://docs.google.com/presentation/d/11pWMljuWkiJGVz9eNaBLPopMQV3oU8z6Wm-jBG83Tec/edit?slide=id.g3ae40e20a8a_0_8#slide=id.g3ae40e20a8a_0_8)
+
+---
+
+If you are interested in contributing to our project, check out the [contributing](https://github.com/GaiSamuel/MIT_Emerging_Talent_ELO2-Uganda-Districts-Rainfall-Prediction-Using-Machine-Learning/blob/main/CONTRIBUTING.md)
+ file to  find out how to do so.
